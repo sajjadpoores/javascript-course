@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style/style.css" />
-    <script src="script/app.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -14,12 +13,16 @@
         </div>
         <div class="buttons">
           <div class="row">
-            <input type="button" id="addb" value="+" onclick="add()" />
-            <input type="button" id="subb" value="-" />
-            <input type="button" id="mulb" value="*" />
-            <input type="button" id="divb" value="/" />
+            <input type="button" value="+" />
+            <input type="button" value="-" />
+            <input type="button" value="*" />
+            <input type="button" value="/" />
           </div>
-
+          
+          <div class="row">
+            <input type="button" value="c"/>
+          </div>
+          
           <div class="row uprow">
             <p>result:</p>
             <span id="result">0</span>
