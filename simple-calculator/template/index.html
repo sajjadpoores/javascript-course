@@ -4,22 +4,25 @@
     <meta charset="utf-8" />
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style/style.css" />
+    <script src="script/app.js" defer></script>
   </head>
   <body>
     <div class="container">
       <form name="form">
         <div class="display">
-          <input type="text" value="0" id="displayResult" />
+          <input type="text" value="0" id="display" />
         </div>
         <div class="buttons">
           <div class="row">
-            <input type="button" id="addb" value="+" />
+            <input type="button" id="addb" value="+" onclick="add()" />
             <input type="button" id="subb" value="-" />
             <input type="button" id="mulb" value="*" />
             <input type="button" id="divb" value="/" />
           </div>
-          <div class="row">
-            <input type="button" class="red" id="equalb" value="=" />
+
+          <div class="row uprow">
+            <p>result:</p>
+            <span id="result">0</span>
           </div>
         </div>
       </form>
