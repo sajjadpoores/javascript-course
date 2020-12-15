@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style/style.css" />
+    <script src="script/app.js" defer></script>
   </head>
-
   <body>
     <div class="container">
       <form name="form">
         <div class="display">
-          <input type="text" placeholder="0" id="displayResult" />
+          <input type="text" value="0" id="displayResult" />
         </div>
         <div class="buttons">
           <div class="row">
@@ -20,7 +20,7 @@
             <input type="button" id="divb" value="/" />
           </div>
           <div class="row">
-            <input type="button" class="red" value="=" />
+            <input type="button" class="red" id="equalb" value="=" />
           </div>
         </div>
       </form>
