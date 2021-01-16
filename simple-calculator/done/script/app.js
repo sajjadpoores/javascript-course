@@ -1,33 +1,37 @@
-let display = document.getElementById('display') // input tag
-let result = document.getElementById('result') // p tag
-let memory = 0 // memory of last result
+let display = document.getElementById('display')
+let result = document.getElementById('result')
+let memory = 0
 
 function add() {
-    result.innerText =  `${memory} + ${parseInt(display.value)} = ${memory + parseInt(display.value)}`
-    memory = memory + parseInt(display.value) 
+    display.value = parseInt(display.value)
+    result.innerText = `${memory} + ${display.value} = ${memory + display.value}`
+    memory += display.value
     display.value = 0
 }
 
-function subtract() {
-    result.innerText =  `${memory} - ${parseInt(display.value)} = ${memory - parseInt(display.value)}`
-    memory = memory - parseInt(display.value) 
+function sub() {
+    display.value = parseInt(display.value)
+    result.innerText = `${memory} - ${display.value} = ${memory - display.value}`
+    memory -= display.value
     display.value = 0
 }
 
-function multiplication() {
-    result.innerText =  `${memory} x ${parseInt(display.value)} = ${memory * parseInt(display.value)}`
-    memory = memory * parseInt(display.value) 
+function mul() {
+    display.value = parseInt(display.value)
+    result.innerText = `${memory} * ${display.value} = ${memory * display.value}`
+    memory *= display.value
     display.value = 0
 }
 
-function division() {
-    result.innerText =  `${memory} / ${parseInt(display.value)} = ${memory / parseInt(display.value)}`
-    memory = memory / parseInt(display.value) 
+function div() {
+    display.value = parseInt(display.value)
+    result.innerText = `${memory} / ${display.value} = ${memory / display.value}`
+    memory /= display.value
     display.value = 0
 }
 
-function cleanAll() {
-    display.value = 0
-    memory = 0
+function restart() {
     result.innerText = 0
+    memory = 0
+    display.value = 0
 }
